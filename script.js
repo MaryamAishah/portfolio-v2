@@ -5,6 +5,7 @@
   const reduce = matchMedia('(prefers-reduced-motion: reduce)');
 
   const HOST = 'maryamroomi.vercel.app';
+  const HOME_TITLE = document.title;
   const PALETTE = ['peach', 'sky', 'butter', 'sage', 'rose', 'mint', 'lilac', 'pistachio', 'sand'];
 
   const win = $('#win');
@@ -198,7 +199,7 @@
     win.style.setProperty('--cur', accentOf(sec));
     typePath(pathOf(sec));
     const label = sec.dataset.label.toLowerCase();
-    document.title = id === 'home' ? 'maryam roomi' : `${label} · maryam roomi`;
+    document.title = id === 'home' ? HOME_TITLE : `${label} · maryam roomi`;
     try { history.replaceState(null, '', id === 'home' ? location.pathname + location.search : '#' + id); } catch (e) {}
   };
 
