@@ -109,7 +109,7 @@
   /* ---------- scroll reveal (fades in on enter, out on leave) ---------- */
 
   const targets = $$([
-    '.contact > *', '.card', '.meta', '.entry h3', '.org', '.bul li', '.lead',
+    '.now', '.intro', '.contact > *', '.card', '.meta', '.entry h3', '.org', '.bul li', '.lead',
     '.chip', '.cert', '.score-row > h3', '.score-row > .score', '.cell'
   ].join(','));
   const targetSet = new Set(targets);
